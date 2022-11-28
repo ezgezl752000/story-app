@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="18.172" height="18.439" viewBox="0 0 18.172 18.439">
+  <defs>
+    <pattern id="pattern" preserveAspectRatio="none" width="100%" height="100%" viewBox="0 0 16 42">
+      <image width="16" height="42" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAqCAYAAAC6EtuqAAAABHNCSVQICAgIfAhkiAAAAKpJREFUSEvtlTEOgCAMRculNNFVz6Wey9nBU6nfpKaUBkhYHMom8J/93yKhG6aLGkb4F+A89lDjph/nz3ZkwQFEzRnUfAG9xxuJyDvRM8C58D7wDJI+QF9U/ljtq+0XgPWpYivYWJ517HsHzgIeMMkjB4nEeBkAENZAEjF0DChBTDFbkJatShjO+5BRlIHOTEPkeiS2KpBBymAxn4hzAJ2JKS4BpPfPs/Z7A4AwuhFQnpV2AAAAAElFTkSuQmCC"/>
+    </pattern>
+  </defs>
+  <g id="Layer_71" data-name="Layer 71" transform="matrix(0.718, 0.696, -0.696, 0.718, 13.215, 0)" opacity="0.702">
+    <rect id="Layer_71-2" data-name="Layer 71" width="6.904" height="18.987" fill="url(#pattern)"/>
+  </g>
+</svg>

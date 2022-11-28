@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Hải Vương Truyện</string>
+    <string name="facebook_app_id">1960734537468153</string>
+    <string name="fb_login_protocol_scheme">fb1960734537468153</string>
+</resources>
