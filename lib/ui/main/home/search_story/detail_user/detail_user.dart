@@ -87,7 +87,7 @@ class _DetailUserState extends State<DetailUser> {
                                                     boxFit: BoxFit.cover,
                                                   )
                                                 : Image.asset(
-                                                    'assets/logo_no_text.png',
+                                                    'assets/logo.png',
                                                     width: 80,
                                                     height: 100,
                                                     fit: BoxFit.cover,

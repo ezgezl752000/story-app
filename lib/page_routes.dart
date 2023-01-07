@@ -24,7 +24,7 @@ class PageRoutes {
   static const listStoryByCate = "main_page/home/category/list_story";
   static const detailStory = "main_page/home/detail_story";
   static const readStory = "main_page/home/detail_story/read_story";
-  static const book = "main_page/book";
+  static const book = "main_page/story";
   static const notification = "main_page/notification";
   // static const personal = "main_page/personal";
   static const changePassword = "main_page/personal/change_password";

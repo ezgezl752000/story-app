@@ -39,7 +39,7 @@
 //                   right: 0,
 //                   child: Center(
 //                     child: Hero(
-//                       tag: 'assets/logo_no_text.png',
+//                       tag: 'assets/logo.png',
 //                       child: ClipRRect(
 //                           borderRadius: BorderRadius.circular(150),
 //                           child:AppProvider.instance.user.avatarUrl != null ? CachedNetworkImageCustom(
@@ -47,7 +47,7 @@
 //                             width: context.getWidth() /3.5,
 //                             height: context.getWidth() /3.5,
 //                             boxFit: BoxFit.cover,
-//                           ) : Image.asset('assets/logo_no_text.png',
+//                           ) : Image.asset('assets/logo.png',
 //                             width: context.getWidth() /3.5,
 //                             height: context.getWidth() /3.5,
 //                             fit: BoxFit.cover,

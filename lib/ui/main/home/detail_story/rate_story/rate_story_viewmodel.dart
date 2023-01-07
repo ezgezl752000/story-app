@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/model/rate_story.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 

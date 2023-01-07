@@ -34,7 +34,7 @@ class ItemUserFollow extends StatelessWidget {
                 : ClipRRect(
                     borderRadius: BorderRadius.circular(150),
                     child: Image.asset(
-                      'assets/logo_no_text.png',
+                      'assets/logo.png',
                       fit: BoxFit.cover,
                       width: 50,
                       height: 50,

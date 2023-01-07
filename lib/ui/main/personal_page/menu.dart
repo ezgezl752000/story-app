@@ -126,7 +126,7 @@ Future logOut(BuildContext context) async {
   AppProvider.instance.token = null;
   AppProvider.instance.user = UserModel();
   Navigator.of(context, rootNavigator: true).pushNamedAndRemoveUntil(
-      PageRoutes.mainPage, (route) => false,
+      PageRoutes.login, (route) => false,
       arguments: 0);
 }
 

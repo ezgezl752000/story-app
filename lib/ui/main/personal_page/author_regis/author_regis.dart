@@ -23,22 +23,9 @@ class AuthorRegis extends StatelessWidget {
         padding: const EdgeInsets.fromLTRB(10, 0, 10, 10),
         child: Column(children: [
           sizeBox10,
-          const Text("Chính sách và điều khoản của Hải Vương Truyện",
+          const Text("Chính sách và điều khoản",
               style: textBoldBlue),
           sizeBox10,
-          Expanded(
-            child: Container(             
-              decoration: BoxDecoration(
-                border: Border.all(color: colorGrey, width: 1),
-                borderRadius: BorderRadius.circular(5),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(5),
-                child: SingleChildScrollView(child: Html(data: AppConfig.policy)),
-              ),
-            ),
-          ),
-          sizeBox5,
           Container(
             width: context.getWidth(),
             decoration: BoxDecoration(
@@ -65,17 +52,6 @@ class AuthorRegis extends StatelessWidget {
                         text: "Tôi đã đọc và chấp thuận ",
                         style: textNormal,
                         children: [
-                          TextSpan(
-                            text: 'Chính sách và điều khoản',
-                            style: TextStyle(
-                              color: blueColor,
-                              decoration: TextDecoration.underline,
-                            ),
-                          ),
-                          TextSpan(
-                            text: ' của Hải Vương Truyện.',
-                            style: textNormal,
-                          ),
                         ])),
                   ),
                 ]),

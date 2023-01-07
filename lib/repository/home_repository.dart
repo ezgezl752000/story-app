@@ -1,5 +1,5 @@
 import 'package:ns_read_story/model/config.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/repository/repository.dart';
 
 import '../api/response_model/http_response.dart';

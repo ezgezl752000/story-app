@@ -24,7 +24,7 @@ class LoginViewModel extends BaseViewModel {
     if (res.code == 200) {
       await PreferenceManager.setString(PreferenceManager.username, username);
       await PreferenceManager.setString(PreferenceManager.password, password);
-      await PreferenceManager.setBool(PreferenceManager.remember, remember);
+      await PreferenceManager.setBool(PreferenceManager.remember, true);
       EasyLoading.dismiss();
       return res;
     } else {

@@ -21,7 +21,7 @@ part 'author.g.dart';
 
 @HiveType(typeId: 3)
 class Author {
-  Author({
+    Author({
     this.id,
     this.deleted,
     this.enabled,

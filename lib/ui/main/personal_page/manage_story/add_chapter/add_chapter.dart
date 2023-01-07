@@ -45,13 +45,6 @@ class _AddChapterState extends State<AddChapter> {
                   controller: viewModel.edtName,
                 ),
                 sizeBox15,
-                TextFieldCustom(
-                  hintText: 'Giá',
-                  enable: viewModel.canEnterPrice == 'true',
-                  controller: viewModel.edtPrice,
-                  textInputType: TextInputType.number,
-                ),
-                sizeBox15,
                 HtmlEditorCustom(
                   controller: viewModel.htmlController,
                   value: viewModel.chapter?.content??'',
@@ -60,8 +53,6 @@ class _AddChapterState extends State<AddChapter> {
                 //   setState(() { });
                 // },
                 ),
-                // const SizedBox(height: 5,),
-                // Text('Số chữ: ${content.split(' ').length}'),
                 sizeBox15,
                 ButtonRadius(
                   text: viewModel.isEdit == 'true' ? 'Lưu' :'Tạo',

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/page_routes.dart';
 import 'package:ns_read_story/shared/cache_image_network.dart';
 import 'package:ns_read_story/ui/main/home/ranking/ranking_viewmodel.dart';

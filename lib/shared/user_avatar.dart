@@ -34,7 +34,7 @@ class UserAvatar extends StatelessWidget {
                   boxFit: BoxFit.cover,
                 )
               : Image.asset(
-                  'assets/logo_no_text.png',
+                  'assets/logo.png',
                   width: width,
                   height: height,
                   fit: BoxFit.cover,

@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ns_read_story/base/base_view_model.dart';
-import 'package:ns_read_story/model/detail_chapter.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/chapter.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/model/info_chapter.dart';
 import 'package:ns_read_story/repository/story_repository.dart';
 import 'package:ns_read_story/ultils/app_config.dart';
@@ -50,7 +50,6 @@ class ReadStoryViewModel extends BaseViewModel{
     showEvent();
     getInfoChapter();
     readChapter();
-    checkLikeChapter();
     scollListener();
     // lấy độ sáng hiện tại
     currentBrightness.then((value) {
@@ -92,7 +91,6 @@ class ReadStoryViewModel extends BaseViewModel{
     controller.animateTo(0, duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
     checkCanMoveChapter();
     readChapter();
-    checkLikeChapter();
     notifyListeners();
   }
 
@@ -104,7 +102,6 @@ class ReadStoryViewModel extends BaseViewModel{
     controller.animateTo(0, duration: const Duration(milliseconds: 300), curve: Curves.easeIn);
     checkCanMoveChapter();
     readChapter();
-    checkLikeChapter();
     notifyListeners();
   }
 
@@ -120,11 +117,6 @@ class ReadStoryViewModel extends BaseViewModel{
 
       InfoChapter e = (await storyRepository.getInfoChapter(idBook!, idChapterNeedBuy)).data as InfoChapter;
       if(AppProvider.instance.token == null){
-        if(e.price !=0){
-          AppProvider.instance.showDialogLogin(
-              context,
-              'Bạn cần đăng nhập để mua chương tiếp theo');
-        }
       }else{
         print("áodkaoskdokasd");
           Future.delayed(Duration.zero)
@@ -132,7 +124,7 @@ class ReadStoryViewModel extends BaseViewModel{
             context: context,
             builder: (context) =>
                 DialogConfirmQuestion(
-                  coin: e.price.toString(),
+                  coin: '',
                   mess:
                   'Bạn có chắc chắn muốn mua chương tiếp theo?',
                   action: ()  {
@@ -185,22 +177,6 @@ class ReadStoryViewModel extends BaseViewModel{
     }
     notifyListeners();
   }
-
-
-  likeChapter() async {
-    final res = await storyRepository.likeChapter(idChapter!);
-    if(res.code==200){
-      checkLikeChapter();
-    }
-  }
-
-    checkLikeChapter() async{
-      final res = await storyRepository.checkIsLikedBool(idChapter!);
-      if(res.code==200){
-        isLikeChapter = res.dataBool ?? false;
-        notifyListeners();
-      }
-    }
 
 
   checkCanMoveChapter(){

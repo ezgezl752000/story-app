@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>650409454334-2v72hu6nenjto63qcba3dg0t6k0kksnl.apps.googleusercontent.com</string>
+	<string>263670518044-23iiu82kt3argb8b88pv9eq4qrt9o7kc.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.650409454334-2v72hu6nenjto63qcba3dg0t6k0kksnl</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>650409454334-04cop8fmhu1665ugor69rn3fr0e1jtsl.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.263670518044-23iiu82kt3argb8b88pv9eq4qrt9o7kc</string>
 	<key>API_KEY</key>
-	<string>AIzaSyCBazpU_u47Z1VbLSOag1GkuDtN8CNOZus</string>
+	<string>AIzaSyCqu_maO4swyCSUczXLVekBFs03wIVOPtU</string>
 	<key>GCM_SENDER_ID</key>
-	<string>650409454334</string>
+	<string>263670518044</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>haivuongtruyen.nextsol.vn</string>
+	<string>com.example.myapp</string>
 	<key>PROJECT_ID</key>
-	<string>haivuongtruyen11032022</string>
+	<string>story-3d91e</string>
 	<key>STORAGE_BUCKET</key>
-	<string>haivuongtruyen11032022.appspot.com</string>
+	<string>story-3d91e.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:650409454334:ios:d58aabcbb2b905fced13af</string>
+	<string>1:263670518044:ios:bcde67f78828d39d46aad9</string>
 </dict>
 </plist>

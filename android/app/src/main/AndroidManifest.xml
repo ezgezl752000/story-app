@@ -1,6 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.nextsol.ns_read_story">
+    package="com.example.myapp">
 
 
     <uses-permission android:name="android.permission.INTERNET" />
@@ -11,10 +11,10 @@
 
     <application
         android:requestLegacyExternalStorage="true"
-        android:label="Hải Vương Truyện"
+        android:label="Story App"
         android:name="${applicationName}"
         android:usesCleartextTraffic="true"
-        android:icon="@mipmap/ic_launcher">
+        android:icon="@mipmap/launcher_icon">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-3320796159824143~5235119386"/>

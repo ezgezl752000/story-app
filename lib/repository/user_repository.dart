@@ -2,7 +2,6 @@ import 'dart:convert';
 import 'package:ns_read_story/api/request_model/login_request.dart';
 import 'package:ns_read_story/api/response_model/http_response.dart';
 import 'package:ns_read_story/api/response_model/response_message.dart';
-import 'package:ns_read_story/model/attend_model.dart';
 import 'package:ns_read_story/model/config.dart';
 import 'package:ns_read_story/model/notification_model.dart';
 import 'package:ns_read_story/model/user.dart';
@@ -207,50 +206,4 @@ class UserRepository extends Repository {
     return Future.value(response);
   }
 
-  Future<HttpResponseApi<List<AttendModel>>> getListDayAttended() async {
-    HttpResponseApi<List<AttendModel>> response = HttpResponseApi();
-    await dioHelper!.get("/api/v1/attendance",
-        queryParameters: {"userId": AppProvider.instance.user.id}).then((res) {
-      response.code = res.statusCode;
-      final List<AttendModel> list = [];
-      for (var e in res.data['data']) {
-        list.add(AttendModel.fromJson(e));
-      }
-      response.data = list;
-      response.message = res.statusMessage;
-    }).catchError((e) {
-      response.code = 500;
-      response.dataError = e;
-      response.message = "Server Error";
-    });
-    return Future.value(response);
-  }
-
-  Future<HttpResponseApi<AttendModel>> setAttended() async {
-    HttpResponseApi<AttendModel> response = HttpResponseApi();
-    await dioHelper!.post("/api/v1/attendance").then((res) {
-      response.code = res.statusCode;
-      response.data = AttendModel.fromJson(res.data['data']);
-      response.message = res.statusMessage;
-    }).catchError((e) {
-      response.code = 500;
-      response.dataError = e;
-      response.message = "Đã điểm danh";
-    });
-    return Future.value(response);
-  }
-
-  Future<HttpResponseApi<ResponseMessage>> viewAds() async {
-    HttpResponseApi<ResponseMessage> response = HttpResponseApi();
-    await dioHelper!.post("/api/v1/viewAds").then((res) {
-      response.code = res.statusCode;
-      response.data = ResponseMessage.fromJson(res.data);
-      response.message = res.statusMessage;
-    }).catchError((e) {
-      response.code = 500;
-      response.dataError = e;
-      response.message = "Lỗi hệ thống";
-    });
-    return Future.value(response);
-  }
 }

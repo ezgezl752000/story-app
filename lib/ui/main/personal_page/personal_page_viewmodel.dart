@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:ns_read_story/base/base_view_model.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/model/number_follow.dart';
 import 'package:ns_read_story/repository/personal_repository.dart';
 import 'package:ns_read_story/ultils/global_bloc.dart';

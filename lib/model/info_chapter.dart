@@ -2,7 +2,6 @@
 /// name : "Chương 2"
 /// showAds : null
 /// isNew : null
-/// price : 0
 /// bookId : "6218900bebd065d693baa724"
 /// totalView : 0
 /// enabled : true
@@ -17,12 +16,10 @@ class InfoChapter {
     this.name,
     this.showAds,
     this.isNew,
-    this.price,
     this.bookId,
     this.totalView,
     this.enabled,
     this.updatedAt,
-    this.isBuy,
     this.nextChapterId,
     this.previousChapterId,
     this.content,
@@ -33,7 +30,6 @@ class InfoChapter {
     name = json['name'];
     showAds = json['showAds'];
     isNew = json['isNew'];
-    price = json['price'];
     bookId = json['bookId'];
     totalView = json['totalView'];
     enabled = json['enabled'];
@@ -48,7 +44,6 @@ class InfoChapter {
   String? name;
   dynamic showAds;
   dynamic isNew;
-  double? price;
   bool? isBuy;
   String? bookId;
   int? totalView;
@@ -64,7 +59,6 @@ class InfoChapter {
     map['name'] = name;
     map['showAds'] = showAds;
     map['isNew'] = isNew;
-    map['price'] = price;
     map['bookId'] = bookId;
     map['totalView'] = totalView;
     map['enabled'] = enabled;

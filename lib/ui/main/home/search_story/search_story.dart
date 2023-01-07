@@ -9,7 +9,6 @@ import 'package:ns_read_story/ultils/constants.dart';
 import 'package:ns_read_story/ultils/extensions.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../widgets/banner_widget.dart';
 
 class SearchStory extends StatefulWidget {
   const SearchStory({Key? key}) : super(key: key);
@@ -131,7 +130,6 @@ class _SearchStoryState extends State<SearchStory> {
                   ),
                 ),
               ),
-              BannerAdWidget(AdSize.banner)
             ],
           )
       ),
@@ -160,7 +158,7 @@ class _SearchStoryState extends State<SearchStory> {
               borderRadius: 150,
             ) :  ClipRRect(
              borderRadius: BorderRadius.circular(150),
-              child: Image.asset('assets/logo_no_text.png',
+              child: Image.asset('assets/logo.png',
                fit: BoxFit.cover,
                width: 50,
                height: 50,

@@ -24,8 +24,6 @@ class _BodyRankingPageState extends State<BodyRankingPage> {
           child: TabBarView(
             children: const[
               StoryRanking(),
-              AuthorRanking(),
-              TranslatorRanking()
             ],
             controller: widget.controller,
           )),

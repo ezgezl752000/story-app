@@ -45,7 +45,7 @@ class ItemAuthor extends StatelessWidget {
                 width: context.getWidth()/9,
                 boxFit: BoxFit.cover,
                 height: context.getWidth()/9,
-              ) : Image.asset('assets/logo_no_text.png',
+              ) : Image.asset('assets/logo.png',
                 width: context.getWidth()/9,
                 fit: BoxFit.cover,
                 height: context.getWidth()/9,

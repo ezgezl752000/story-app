@@ -6,8 +6,8 @@ import 'package:ns_read_story/repository/home_repository.dart';
 import 'package:ns_read_story/repository/story_repository.dart';
 import 'package:ns_read_story/repository/user_repository.dart';
 import 'package:ns_read_story/shared/bottom_bar_type.dart';
-import 'package:ns_read_story/ui/main/book/book_page.dart';
-import 'package:ns_read_story/ui/main/book/book_viewmodel.dart';
+import 'package:ns_read_story/ui/main/story/book_page.dart';
+import 'package:ns_read_story/ui/main/story/book_viewmodel.dart';
 import 'package:ns_read_story/ui/main/home/home_page.dart';
 import 'package:ns_read_story/ui/main/home/home_viewmodel.dart';
 import 'package:ns_read_story/ui/main/main_page_viewmodel.dart';
@@ -22,7 +22,6 @@ import 'package:provider/provider.dart';
 import '../../main.dart';
 import '../../repository/personal_repository.dart';
 import '../../shared/dialog.dart';
-import '../../widgets/banner_widget.dart';
 import 'personal_page/personal_page.dart';
 import 'personal_page/personal_page_viewmodel.dart';
 

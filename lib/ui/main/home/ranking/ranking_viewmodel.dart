@@ -1,5 +1,5 @@
 import 'package:ns_read_story/base/base_view_model.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/repository/story_repository.dart';
 import 'package:pull_to_refresh/pull_to_refresh.dart';
 

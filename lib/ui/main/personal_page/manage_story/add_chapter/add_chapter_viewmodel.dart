@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:html_editor_enhanced/html_editor.dart';
 import 'package:ns_read_story/base/base_view_model.dart';
-import 'package:ns_read_story/model/detail_chapter.dart';
+import 'package:ns_read_story/model/chapter.dart';
 import 'package:ns_read_story/repository/personal_repository.dart';
 
 class AddChapterViewModel extends BaseViewModel {
@@ -56,8 +56,6 @@ class AddChapterViewModel extends BaseViewModel {
     }
     return false;
   }
-
-
 
   Future<bool> checkAddChapter() async {
     if(edtName.text.isEmpty){

@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:hive/hive.dart';
 import 'package:ns_read_story/base/base_view_model.dart';
-import 'package:ns_read_story/model/detail_chapter.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/chapter.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/model/story_history.dart';
 import 'package:ns_read_story/repository/story_repository.dart';
 import 'package:ns_read_story/ultils/global_bloc.dart';
@@ -52,7 +52,7 @@ class DetailStoryViewModel extends BaseViewModel {
   }
 
   getListChapter() async {
-    final res = AppProvider.instance.token == null ? await storyRepository.getListChapter(idBook!, page, size) : await storyRepository.getListChapterCheckToken(idBook!, page, size);
+    final res = await storyRepository.getListChapter(idBook!, page, size);
     if (res.code == 200 && res.data != null) {
       listChapter = res.data as List<Chapter>;
       canBackPage = true;
@@ -85,22 +85,6 @@ class DetailStoryViewModel extends BaseViewModel {
     notifyListeners();
   }
 
-  downloadStory() async {
-    EasyLoading.show();
-    final storyBox = Hive.box('story');
-    var keyItem;
-    storyBox.toMap().forEach((key, value) {
-      if (value.id == detailStory!.id) {
-        keyItem = key;
-      }
-    });
-    storyBox.delete(keyItem);
-    final Story? story = detailStory;
-    story!.chapters?.removeWhere((e) => e.price!=0);
-    storyBox.add(story);
-    EasyLoading.dismiss();
-    EasyLoading.showSuccess("Tải truyện thành công");
-  }
 
   followStory() async {
     if (isFollowed) {
@@ -135,16 +119,4 @@ class DetailStoryViewModel extends BaseViewModel {
     notifyListeners();
   }
   
-  reportStory (BuildContext contextScreen) {
-    Future.delayed(Duration.zero).then((_) {
-      showDialog(
-          context: contextScreen,
-          builder: (context) => DialogReport(
-              mess: "Báo cáo truyện",
-              action: () {
-                Navigator.pop(contextScreen);
-                EasyLoading.showSuccess('Báo cáo thành công');
-              }));
-    });
-  }
 }

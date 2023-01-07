@@ -42,9 +42,6 @@ class _LoginScreenState extends State<LoginScreen> {
     edtPhone.text = PreferenceManager.getString(PreferenceManager.username);
   }
 
-
-
-
   @override
   void initState() {   
     super.initState();
@@ -62,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
         decoration: const BoxDecoration(
           image:  DecorationImage(
             image: AssetImage('assets/background.png'),
-            fit: BoxFit.fill
+            fit: BoxFit.fitWidth,
           ),
         ),
         child: Stack(
@@ -72,15 +69,15 @@ class _LoginScreenState extends State<LoginScreen> {
                 padding: const EdgeInsets.fromLTRB(16, 35, 16, 0),
                 child: Column(
                   children: [
-                    sizeBox20,
+                    SizedBox(height: 35),
                      SizedBox(
-                      height: 120,
+                      height: 160,
                       width: 160,
                       child: Container(
                         decoration: const BoxDecoration(
                           image:  DecorationImage(
                               image: AssetImage('assets/logo.png'),
-                              fit: BoxFit.fill
+                              fit: BoxFit.cover
                           ),
                         ),
                       ),
@@ -121,14 +118,14 @@ class _LoginScreenState extends State<LoginScreen> {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         // Checkbox(value: false, onChanged: onChanged)
-                        CheckBoxCustom(
-                          isChecked: rememberLogin,
-                          onPress: (value) {
-                            rememberLogin=value;
-                            setState(() {});
-                          },
-                          title: "Ghi nhớ đăng nhập",
-                        ),
+                        // CheckBoxCustom(
+                        //   isChecked: rememberLogin,
+                        //   onPress: (value) {
+                        //     rememberLogin=value;
+                        //     setState(() {});
+                        //   },
+                        //   title: "Ghi nhớ đăng nhập",
+                        // ),
                         InkWell(
                           onTap: (){
                             Navigator.pushNamed(context, PageRoutes.register1,arguments: 'true');

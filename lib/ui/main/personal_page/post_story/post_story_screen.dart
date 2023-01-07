@@ -26,7 +26,7 @@ class _PostStoryState extends State<PostStory> {
       backgroundColor: colorBg,
       resizeToAvoidBottomInset: false,
       appBar: MyAppBar(
-        title: viewModel.idBook == '' ? "Thêm tiểu thuyết" : "Sửa Tiểu thuyết",
+        title: viewModel.idBook == '' ? "Thêm truyện" : "Sửa truyện",
       ),
       body: SingleChildScrollView(
         child: Padding(
@@ -36,14 +36,14 @@ class _PostStoryState extends State<PostStory> {
             children: [
               sizeBox15,
               TextFieldCustom(
-                hintText: 'Tiêu đề tiểu thuyết',
+                hintText: 'Tiêu đề truyện',
                 controller: viewModel.titleEdtController,
               ),
               sizeBox10,
               SizedBox(
                 height: MediaQuery.of(context).size.height / 3.5,
                 child: TextFieldCustom(
-                  hintText: 'Nội dung tiểu thuyết',
+                  hintText: 'Nội dung truyện',
                   onChange: (value){
                     setState(() {});
                   },
@@ -143,7 +143,7 @@ class _PostStoryState extends State<PostStory> {
                 child: NormalButton(
                   width: context.getWidth()/1.5,
                   height: 35,
-                  text:viewModel.idBook == '' ? "Thêm tiểu thuyết" : "Lưu",
+                  text:viewModel.idBook == '' ? "Thêm truyện" : "Lưu",
                   action: () async{
                     if(viewModel.idBook == ''){
                      await viewModel.createStory(context);

@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "650409454334",
-    "project_id": "haivuongtruyen11032022",
-    "storage_bucket": "haivuongtruyen11032022.appspot.com"
+    "project_number": "263670518044",
+    "project_id": "story-3d91e",
+    "storage_bucket": "story-3d91e.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:650409454334:android:2fe31eb255ade89bed13af",
+        "mobilesdk_app_id": "1:263670518044:android:1c6f28d9bd52540346aad9",
         "android_client_info": {
-          "package_name": "haivuongtruyen.nextsol.vn"
+          "package_name": "com.example.myapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "650409454334-ijknb6q9p5iln51p59509eds7vefpn41.apps.googleusercontent.com",
+          "client_id": "263670518044-e8q0uj8rutmj1igg4itovv435kll8kk1.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCbjQxOwcg0elnzk3yTANedHYMH2Fdxe5k"
+          "current_key": "AIzaSyA6K6YHHlAw48e9zRuvEliWmACiIm0fxzk"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "650409454334-ijknb6q9p5iln51p59509eds7vefpn41.apps.googleusercontent.com",
+              "client_id": "263670518044-e8q0uj8rutmj1igg4itovv435kll8kk1.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

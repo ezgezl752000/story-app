@@ -49,14 +49,13 @@ class _CategoryStoryState extends State<CategoryStory> {
                     itemBuilder: (context, index) {
                       Categories e = viewModel.listCategory[index];
                       return  HomeItem(
-                        icon: e.thumbnail ?? '',
-                        isImageNetWork: true,
+                        iconPng: 'assets/The loai.png',
                         title: e.name ?? '',
                         action: (){
                           Navigator.of(context,rootNavigator: true).pushNamed(PageRoutes.listStoryByCate,arguments: [e.id,e.name]);
                         },
                         width: context.getWidth() / 7,
-                        height: context.getWidth() / 11,
+                        height: context.getWidth() / 7,
                       );
                     },
                   ),

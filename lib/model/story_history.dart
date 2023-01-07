@@ -1,5 +1,5 @@
-import 'package:ns_read_story/model/detail_chapter.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/chapter.dart';
+import 'package:ns_read_story/model/story.dart';
 
 /// id : "621b557d8831936eeca30205"
 /// deleted : false

@@ -12,7 +12,7 @@ import 'package:ns_read_story/shared/dialog.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
 import 'package:tuple/tuple.dart';
 
-import '../../../../../model/detail_story.dart';
+import '../../../../../model/story.dart';
 
 
 class PostStoryViewModel extends BaseViewModel{
@@ -31,7 +31,6 @@ class PostStoryViewModel extends BaseViewModel{
   Story story = Story();
   List<Tuple2<String,String>> listRoles = [
     const Tuple2("0", "Tác giả"),
-    const Tuple2("1", "Dịch giả"),
   ];
   List<Tuple2<String,String>> listStatus= [
     const Tuple2("0", "Đang tiến hành"),
@@ -178,7 +177,7 @@ class PostStoryViewModel extends BaseViewModel{
                   context: contextScreen,
                   builder: (context) => DialogSuccess(
                     mess:
-                    'Tạo thành công, tác phẩm của bạn đang được chờ duyệt',
+                    'Tạo thành công',
                     action: () async{
                       await  Navigator.of(context, rootNavigator: true)
                           .pushNamed(PageRoutes.manageStory,arguments: response.dataStory?.id);

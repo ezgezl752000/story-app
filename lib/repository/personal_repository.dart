@@ -2,7 +2,7 @@ import 'dart:convert';
 
 import 'package:dio/dio.dart';
 import 'package:ns_read_story/api/response_model/response_message.dart';
-import 'package:ns_read_story/model/detail_chapter.dart';
+import 'package:ns_read_story/model/chapter.dart';
 import 'package:ns_read_story/model/number_follow.dart';
 import 'package:ns_read_story/model/user.dart';
 import 'package:ns_read_story/repository/repository.dart';
@@ -11,7 +11,7 @@ import 'package:ns_read_story/ultils/global_bloc.dart';
 import '../api/request_model/update_info_request.dart';
 import '../api/response_model/http_response.dart';
 import '../model/category_model.dart';
-import '../model/detail_story.dart';
+import '../model/story.dart';
 
 class PersonalRepository extends Repository {
   Future<HttpResponseApi<List<Story>>> getListStorys(String userID) async {

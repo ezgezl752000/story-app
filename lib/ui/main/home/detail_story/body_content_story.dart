@@ -25,30 +25,30 @@ class _BodyContentStoryState extends State<BodyContentStory> {
         const Divider(),
         Text( viewModel.detailStory?.description ?? '...',
           style: textNormal.copyWith(color: Colors.black54),),
-        const Divider(),
-        sizeBox10,
-        Text("Đề xuất",style: textBoldNormalBlueDark.copyWith(color: Colors.black87),),
-        sizeBox10,
-        SizedBox(
-          width: context.getWidth(),
-          child: Wrap(
-            alignment: WrapAlignment.start,
-            spacing: 15,
-            runAlignment: WrapAlignment.spaceBetween,
-            runSpacing: 15,
-            children: viewModel.listStory.map((e) {
-              return InkWell(
-                onTap: () {
-                  Navigator.of(context,rootNavigator: true).pushNamed(PageRoutes.detailStory,arguments: e);
-                },
-                child: item(
-                    icon: e.thumbnail ?? '',
-                    title: e.name ?? '',
-                    subTitle: e.author?.fullName ?? ''),
-              );
-            }).toList(),
-          ),
-        ),
+        // const Divider(),
+        // sizeBox10,
+        // Text("Đề xuất",style: textBoldNormalBlueDark.copyWith(color: Colors.black87),),
+        // sizeBox10,
+        // SizedBox(
+        //   width: context.getWidth(),
+        //   child: Wrap(
+        //     alignment: WrapAlignment.start,
+        //     spacing: 15,
+        //     runAlignment: WrapAlignment.spaceBetween,
+        //     runSpacing: 15,
+        //     children: viewModel.listStory.map((e) {
+        //       return InkWell(
+        //         onTap: () {
+        //           Navigator.of(context,rootNavigator: true).pushNamed(PageRoutes.detailStory,arguments: e);
+        //         },
+        //         child: item(
+        //             icon: e.thumbnail ?? '',
+        //             title: e.name ?? '',
+        //             subTitle: e.author?.fullName ?? ''),
+        //       );
+        //     }).toList(),
+        //   ),
+        // ),
       ],
     );
   }

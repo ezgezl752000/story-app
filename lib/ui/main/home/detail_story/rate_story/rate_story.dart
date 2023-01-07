@@ -160,7 +160,7 @@ class RateStory extends StatelessWidget {
                                             boxFit: BoxFit.cover,
                                           )
                                         : Image.asset(
-                                            'assets/logo_no_text.png',
+                                            'assets/logo.png',
                                             width: context.getWidth() / 9,
                                             height: context.getWidth() / 9,
                                             fit: BoxFit.cover,

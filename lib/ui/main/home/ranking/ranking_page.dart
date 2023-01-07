@@ -19,7 +19,7 @@ class _RankingPageState extends State<RankingPage> with TickerProviderStateMixin
   @override
   void initState() {    
     super.initState();
-    tabController = TabController(length: 3, vsync: this);
+    tabController = TabController(length: 1, vsync: this);
   }
 
   @override

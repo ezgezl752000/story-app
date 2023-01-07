@@ -25,7 +25,7 @@ class _HeaderState extends State<Header> {
           child: Stack(
             children: [
               Hero(
-                tag: '${widget.heroTag}/assets/bg_personal.png',
+                tag: '${widget.heroTag}/assets/logo.png',
                 child: (AppProvider.instance.user.coverImage != null &&
                         AppProvider.instance.user.coverImage != '')
                     ? CachedNetworkImageCustom(
@@ -47,7 +47,7 @@ class _HeaderState extends State<Header> {
                   right: 0,
                   child: Center(
                     child: Hero(
-                      tag: '${widget.heroTag}/assets/logo_no_text.png',
+                      tag: '${widget.heroTag}/assets/logo.png',
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(150),
                           child: AppProvider.instance.user.avatarUrl != null
@@ -59,7 +59,7 @@ class _HeaderState extends State<Header> {
                                   boxFit: BoxFit.cover,
                                 )
                               : Image.asset(
-                                  'assets/logo_no_text.png',
+                                  'assets/logo.png',
                                   width: context.getWidth() / 3.5,
                                   height: context.getWidth() / 3.5,
                                   fit: BoxFit.cover,
@@ -80,25 +80,6 @@ class _HeaderState extends State<Header> {
           style: textStyleTagName,
         ),
         sizeBox15,
-        InkWell(
-          onTap: () {
-            Navigator.of(context, rootNavigator: true)
-                .pushNamed(PageRoutes.earnCoinsScreen);
-          },
-          child: Container(
-            padding: const EdgeInsets.all(8),
-            decoration: BoxDecoration(
-              border: Border.all(color: orangeColor),
-              borderRadius: BorderRadius.circular(50),
-            ),
-            child: Row(mainAxisSize: MainAxisSize.min, children: [
-              Image.asset("assets/ic_coin.png", width: 28),
-              sizeBox5,
-              Text('${AppProvider.instance.user.point ?? 0}',
-                  style: textBoldBlack),
-            ]),
-          ),
-        )
       ],
     );
   }

@@ -15,13 +15,13 @@ class CachedNetworkImageCustom extends StatelessWidget {
     return ClipRRect(
       borderRadius: BorderRadius.circular(borderRadius ?? 0),
       child: CachedNetworkImage(
-        imageUrl: url.contains('https') ? url :'${AppConfig.urlImage}$url',
+        imageUrl: url.contains('103.183.112') ? url : 'https://img.hoidap247.com/picture/question/20211104/large_1636029458868.jpg',
         width: width,
         height: height,
         alignment: Alignment.center,
         fit: boxFit,
         placeholder: (context, url) =>  Center(child:  CircularProgressIndicator.adaptive(valueColor: AlwaysStoppedAnimation<Color>(Colors.grey.shade600))),
-        errorWidget: (context, url, error) =>  Image.asset('assets/logo_no_text.png',
+        errorWidget: (context, url, error) =>  Image.asset('assets/logo.png',
           width: context.getWidth() /3.5,
           height: context.getWidth() /3.5,
           fit: BoxFit.cover,

@@ -11,8 +11,8 @@ import 'package:hive/hive.dart';
 import 'package:ns_read_story/generated/l10n.dart';
 import 'package:ns_read_story/model/author.dart';
 import 'package:ns_read_story/model/category_model.dart';
-import 'package:ns_read_story/model/detail_chapter.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/chapter.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/page_routes.dart';
 import 'package:ns_read_story/repository/home_repository.dart';
 import 'package:ns_read_story/repository/news_repository.dart';
@@ -44,7 +44,6 @@ import 'package:ns_read_story/ui/main/home/list_storys_hot/list_story_hot.dart';
 import 'package:ns_read_story/ui/main/home/list_storys_hot/list_story_hot_viewmodel.dart';
 import 'package:ns_read_story/ui/main/home/news/detail_news/detail_news.dart';
 import 'package:ns_read_story/ui/main/home/news/news_page.dart';
-import 'package:ns_read_story/ui/main/home/policy/policy.dart';
 import 'package:ns_read_story/ui/main/home/ranking/ranking_page.dart';
 import 'package:ns_read_story/ui/main/home/ranking/ranking_viewmodel.dart';
 import 'package:ns_read_story/ui/main/home/search_story/detail_user/detail_user.dart';
@@ -477,9 +476,6 @@ _pageMap() {
           create: (_) => PersonalPageViewModel(
               personalRepository: context.read<PersonalRepository>()));
     },
-    PageRoutes.policyPage: (BuildContext context) {
-      return const PolicyPage();
-    },
   };
 }
 
@@ -615,12 +611,12 @@ class _SpashsScreenState extends State<SpashsScreen> {
             //     textColor: Colors.white,
             //     fontSize: 16.0);
             Navigator.pushNamedAndRemoveUntil(
-                context, PageRoutes.mainPage, (route) => false,
+                context, PageRoutes.login, (route) => false,
                 arguments: 0);
           }
         } else {
           Navigator.pushNamedAndRemoveUntil(
-              context, PageRoutes.mainPage, (route) => false,
+              context, PageRoutes.login, (route) => false,
               arguments: 0);
         }
     });

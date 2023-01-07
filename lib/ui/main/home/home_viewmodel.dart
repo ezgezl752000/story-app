@@ -31,6 +31,4 @@ class HomeViewModel extends BaseViewModel {
     }
     setLoading = false;
   }
-
-
 }

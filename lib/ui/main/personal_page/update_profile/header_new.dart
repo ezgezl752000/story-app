@@ -76,7 +76,7 @@ class HeaderUpdate extends StatelessWidget {
                   right: 0,
                   child:  Center(
                     child: Hero(
-                      tag: 'assets/logo_no_text.png',
+                      tag: 'assets/logo.png',
                       child: Stack(
                         children: [
                           ClipRRect(
@@ -84,7 +84,7 @@ class HeaderUpdate extends StatelessWidget {
                             child: viewModel.fileAvatar == null
                                 ? viewModel.networkAvatar == ''
                                 ? Image.asset(
-                              'assets/logo_no_text.png',
+                              'assets/logo.png',
                               width: context.getWidth() /  3.5,
                               height: context.getWidth() /  3.5,
                               fit: BoxFit.cover,

@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:ns_read_story/api/response_model/response_message.dart';
-import 'package:ns_read_story/model/detail_chapter.dart';
+import 'package:ns_read_story/model/chapter.dart';
 import 'package:ns_read_story/model/follow_model.dart';
 import 'package:ns_read_story/model/info_chapter.dart';
 import 'package:ns_read_story/model/number_follow.dart';
@@ -10,7 +10,7 @@ import 'package:ns_read_story/repository/repository.dart';
 
 import '../api/response_model/http_response.dart';
 import '../model/category_model.dart';
-import '../model/detail_story.dart';
+import '../model/story.dart';
 import '../model/rate_story.dart';
 import '../ultils/app_config.dart';
 import '../ultils/global_bloc.dart';
@@ -406,28 +406,6 @@ class StoryRepository extends Repository {
       response.code = 500;
       response.dataError = e;
       response.message = "Server Error";
-    });
-    return Future.value(response);
-  }
-
-  Future<ResponseMessage> likeChapter(String idChapter) async {
-    ResponseMessage response = ResponseMessage();
-    await dioHelper!.post("/api/v1/chapter-favorite/add", data: {
-      "userId": AppProvider.instance.user.id,
-      "chapterId": idChapter
-    }).then((res) {
-      response = ResponseMessage.fromJsonDataDiff(res.data);
-    });
-    return Future.value(response);
-  }
-
-  Future<ResponseMessage> checkIsLikedBool(String idChapter) async {
-    ResponseMessage response = ResponseMessage();
-    await dioHelper!.get("/api/v1/chapter-favorite/exist", queryParameters: {
-      "userId": AppProvider.instance.user.id,
-      "chapterId": idChapter
-    }).then((res) {
-      response = ResponseMessage.fromJsonDataBool(res.data);
     });
     return Future.value(response);
   }

@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/shared/cache_image_network.dart';
 import 'package:ns_read_story/ultils/constants.dart';
 
@@ -109,13 +109,6 @@ class ItemStoryView extends StatelessWidget {
                           color: textGray,
                         ),
                         '${detailStory.totalView}'),
-                    subFunction(
-                          const Icon(
-                              Icons.favorite,
-                              size: 17,
-                              color: textGray,
-                            ),
-                        '${detailStory.likeNum}'),
                     subFunction(
                         const Icon(
                           Icons.menu,

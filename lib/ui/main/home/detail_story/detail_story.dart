@@ -71,20 +71,10 @@ class _DetailStoryScreenState extends State<DetailStoryScreen>
                                   title: "Theo dõi",
                                   action: () {
                                     if (AppProvider.instance.token == null) {
-                                      AppProvider.instance.showDialogLogin(
-                                          context,
-                                          'Bạn cần đăng nhập để sử dụng tính năng này');
+
                                     } else {
                                       viewModel.followStory();
                                     }
-                                  }),
-                              item(
-                                  icon: const Icon(
-                                      Icons.report_problem_outlined,
-                                      color: blueColor),
-                                  title: "Báo cáo",
-                                  action: () {
-                                    viewModel.reportStory(context);
                                   }),
                             ],
                           ),
@@ -109,10 +99,6 @@ class _DetailStoryScreenState extends State<DetailStoryScreen>
                                               arguments: viewModel.detailStory);
                                       viewModel.getData();
                                       print('>>>>>>>>>>>${viewModel.idBook}');
-                                      // createRewardedAd();
-
-                                      // EasyLoading.showToast(
-                                      //     'Tính năng đang phát triển');
                                     },
                                     child: item2(
                                         value:
@@ -124,12 +110,6 @@ class _DetailStoryScreenState extends State<DetailStoryScreen>
                                             .toString() ??
                                         '',
                                     name: "Lượt đọc",
-                                    hasIcon: false),
-                                item2(
-                                    value: viewModel.detailStory?.likeNum
-                                            .toString() ??
-                                        '',
-                                    name: "Lượt tim",
                                     hasIcon: false),
                                 item2(
                                     value: viewModel.detailStory?.followNum
@@ -169,31 +149,6 @@ class _DetailStoryScreenState extends State<DetailStoryScreen>
                               },
                             ),
                             sizeBox10,
-                            Visibility(
-                              visible: AppConfig.isShowDownload,
-                              child: InkWell(
-                                onTap: () {
-                                  if (AppProvider.instance.token == null) {
-                                    AppProvider.instance.showDialogLogin(
-                                        context,
-                                        'Bạn cần đăng nhập để sử dụng tính năng này');
-                                  } else {
-                                    viewModel.downloadStory();
-                                  }
-                                },
-                                child: Container(
-                                    width: 35,
-                                    height: 35,
-                                    decoration: BoxDecoration(
-                                        color: colorGrey.withOpacity(0.6),
-                                        borderRadius:
-                                            BorderRadius.circular(50)),
-                                    child: const Icon(
-                                      Icons.download_sharp,
-                                      color: Colors.black45,
-                                    )),
-                              ),
-                            )
                           ],
                         ),
                         sizeBox10,
@@ -219,26 +174,6 @@ class _DetailStoryScreenState extends State<DetailStoryScreen>
                         width: 30,
                         height: 30,
                       ))),
-              Positioned(
-                  top: 5,
-                  right: 10,
-                  child: InkWell(
-                    onTap: () {
-                      // if (Platform.isIOS) {
-                      //   Share.share('http://appstore.com/Hải Vương Truyện');
-                      // } else {
-                      //   Share.share(
-                      //       'https://play.google.com/store/apps/details?id=haivuongtruyen.nextsol.vn');
-                      // }
-                      Share.share(
-                            'http://haivuongtruyen.vn/info/${viewModel.idBook}');
-                    },
-                    child: const Icon(
-                      Icons.share,
-                      color: Colors.black54,
-                      size: 30,
-                    ),
-                  )),
             ],
           ),
         ),

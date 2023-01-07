@@ -8,7 +8,7 @@ import 'package:ns_read_story/shared/dialog.dart';
 import 'package:ns_read_story/ultils/constants.dart';
 import 'package:provider/provider.dart';
 
-import '../../../../../model/detail_chapter.dart';
+import '../../../../../model/chapter.dart';
 import '../personal_page_viewmodel.dart';
 import 'manager_story_viewmodel.dart';
 

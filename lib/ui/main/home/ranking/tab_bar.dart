@@ -21,12 +21,6 @@ class TabRanking extends StatelessWidget {
           Tab(
             text: 'Truyện hot',
           ),
-          Tab(
-            text: 'Tác giả',
-          ),
-          Tab(
-            text: 'Dịch giả',
-          ),
         ],
         controller: controller,
       ),

@@ -52,7 +52,7 @@ class _HeaderState extends State<Header> {
                       child: viewModel.fileAvatar == null
                           ? viewModel.networkAvatar == ''
                           ? Image.asset(
-                        'assets/logo_no_text.png',
+                        'assets/logo.png',
                         width: context.getWidth() / 7,
                         height: context.getWidth() / 7,
                         fit: BoxFit.cover,

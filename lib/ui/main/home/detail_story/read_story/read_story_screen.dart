@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_widget_from_html/flutter_widget_from_html.dart';
 import 'package:flutter_windowmanager/flutter_windowmanager.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:ns_read_story/page_routes.dart';
 import 'package:ns_read_story/shared/cover_loading.dart';
 import 'package:ns_read_story/ui/main/home/detail_story/read_story/header.dart';
 import 'package:ns_read_story/ui/main/home/detail_story/read_story/read_story_viewmodel.dart';
@@ -14,7 +13,6 @@ import 'package:screen_brightness/screen_brightness.dart';
 
 import '../../../../../ultils/app_config.dart';
 import '../../../../../ultils/constants.dart';
-import '../../../../../widgets/banner_widget.dart';
 
 class ReadStory extends StatefulWidget {
   const ReadStory({Key? key}) : super(key: key);
@@ -24,22 +22,6 @@ class ReadStory extends StatefulWidget {
 }
 
 class _ReadStoryState extends State<ReadStory> {
-  @override
-  void initState() {
-    super.initState();
-    disableScreenShot();
-  }
-
-  Future disableScreenShot() async {
-    await FlutterWindowManager.addFlags(FlutterWindowManager.FLAG_SECURE);
-  }
-
-  @override
-  void dispose() async {
-    super.dispose();
-    await ScreenBrightness().resetScreenBrightness();
-    await FlutterWindowManager.clearFlags(FlutterWindowManager.FLAG_SECURE);
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -182,14 +164,6 @@ class _ReadStoryState extends State<ReadStory> {
                                                   : colorGrey)),
                                       InkWell(
                                         onTap: () {
-                                          if (AppProvider.instance.token ==
-                                              null) {
-                                            AppProvider.instance.showDialogLogin(
-                                                context,
-                                                'Bạn cần đăng nhập để sử dụng tính năng này');
-                                          } else {
-                                            viewModel.likeChapter();
-                                          }
                                         },
                                         child: Icon(
                                           viewModel.isLikeChapter
@@ -281,7 +255,6 @@ class _ReadStoryState extends State<ReadStory> {
                   ],
                 ),
               ),
-              BannerAdWidget(AdSize.banner)
             ],
           ),
         ),

@@ -38,17 +38,7 @@ class _HomePageState extends State<HomePage> {
             padding: const EdgeInsets.symmetric(horizontal: 15),
             child: Column(
               children: [
-                Container(
-                  width: context.getWidth(),
-                  color: colorWhite,
-                  height: kToolbarHeight,
-                  child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Image.asset(
-                        'assets/appbar_home.png',
-                        height: context.getWidth() / 10,
-                      )),
-                ),
+                const SizedBox(height: 30),
                 SearchTextField(
                   hint: "Tìm kiếm truyện, tác giả hoặc ...",
                   enable: false,
@@ -119,16 +109,6 @@ class _HomePageState extends State<HomePage> {
                         action: () {
                           Navigator.of(context, rootNavigator: true)
                               .pushNamed(PageRoutes.category);
-                        },
-                      ),
-                    ),
-                    Expanded(
-                      child: HomeItem(
-                        iconPng: 'assets/Tin tuc.png',
-                        title: 'Tin tức',
-                        action: () {
-                          Navigator.of(context, rootNavigator: true)
-                              .pushNamed(PageRoutes.news);
                         },
                       ),
                     ),

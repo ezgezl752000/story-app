@@ -1,4 +1,4 @@
-import 'package:ns_read_story/model/detail_story.dart';
+import 'package:ns_read_story/model/story.dart';
 import 'package:ns_read_story/model/user.dart';
 
 /// status : "OK"
